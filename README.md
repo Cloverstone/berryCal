@@ -1,2 +1,2 @@
 # berryCal
-Calendar based on Berry forms
+A library for managing calendar events with Berry
