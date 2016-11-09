@@ -105,10 +105,10 @@
 					}}
 				],
 				title:"{{title}} - {{status}}",
-				dateField:'date',
+				dateField: 'createdAt',
 				schema:[
 				{type:"text", name:"title", label:"Title"},
-				{type:"date", name:"date", label:"On"},
+				{type:"date", name:"createdAt", label:"On"},
 				{type:"select", name:"status", label: "Status", options:[{label:'Started', value:'Started'}, {label:'Created', value:'Created'}]}
 
 			], data: data})

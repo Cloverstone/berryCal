@@ -74,4 +74,16 @@ function berryCal(options){
 	dayClick: createNew.bind(this),
 	eventDrop: moveEvent.bind(this)
 	});
+
+	_.map(this.options.data,function(item){
+		var newModel = new berryModel(this, item);
+		this.models.push(newModel);
+		this.calendar.fullCalendar('renderEvent', {
+			id: newModel._id, 
+			title: this.template.render(newModel.attributes, templates), 
+			start: newModel.attributes[this.options.dateField],
+			allDay: true}
+		, true )
+	}.bind(this))
+
 }
