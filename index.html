@@ -85,9 +85,7 @@
 
 		<script type='text/javascript' >
 
-
-	
-
+			$.get('http://cberry.io/d/56acf570fee60911004612b9', function(newdata){
 
 			bt = new berryCal({container: '#first',
 				edit:true,
@@ -104,14 +102,21 @@
 						alert('Manage');
 					}}
 				],
-				title:"{{title}} - {{status}}",
-				dateField: 'createdAt',
+				title:"{{name}} - {{description}}",
+				dateField: 'updatedAt',
 				schema:[
-				{type:"text", name:"title", label:"Title"},
-				{type:"date", name:"createdAt", label:"On"},
-				{type:"select", name:"status", label: "Status", options:[{label:'Started', value:'Started'}, {label:'Created', value:'Created'}]}
+				{type:"text", name:"name", label:"Title"},
+				{type:"date", name:"updatedAt", label:"On"},
+				// {type:"select", name:"status", label: "Status", options:[{label:'Started', value:'Started'}, {label:'Created', value:'Created'}]}
 
-			], data: data})
+			], data: newdata})
+
+
+})
+
+	
+
+
 			
 		</script>
 
